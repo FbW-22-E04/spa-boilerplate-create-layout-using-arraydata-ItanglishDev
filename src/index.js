@@ -3,14 +3,24 @@ import ReactDOM from "react-dom/client"; //we use ReactDOM to render into the DO
 
 // only update the value of this array
 const navlinkItems = [
-  'Link to google.com'
-  ,
-  'Link to facebook.com'
-  ,
-  'Link to amazon.com'
+  <li className="nav-item">
+    <a className="nav-link" href="#">
+      Link to google.com
+    </a>
+  </li>,
+  <li className="nav-item">
+    <a className="nav-link" href="#">
+      Link to facebook.com
+    </a>
+  </li>,
+  <li className="nav-item">
+    <a className="nav-link" href="#">
+      Link to amazon.com
+    </a>
+  </li>
 ];
 
-const content = <ul className="nav">{navlinkItems.map((item, idx) => <li className='nav-item' key={idx}><a className="nav-link" href="#">{item}</a></li>)}</ul>;
+const content = <ul className="nav">{navlinkItems}</ul>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
